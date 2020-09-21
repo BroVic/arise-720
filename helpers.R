@@ -80,6 +80,7 @@ wrangle_event_data <- function(data) {
 plot_attendee_data <- function(data) {
   stopifnot(any(grepl("isodate", names(data))))
   require(ggplot2, quietly = TRUE)
+  
   ggplot(data, aes(x = isodate)) +
     geom_bar(col = "blue", fill = "brown") +
     ggtitle("Registrations for Arise Nigeria Project 720",
